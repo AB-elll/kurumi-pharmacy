@@ -63,8 +63,14 @@
         .job-card dd{display:inline;margin-left:4px;color:var(--text-muted)}
         .job-card dd::after{content:"";display:block}
 
+        /* INFO TABLE */
+        .info-table{width:100%;border-collapse:collapse;background:var(--white);border-radius:var(--radius);overflow:hidden}
+        .info-table th,.info-table td{padding:16px 20px;text-align:left;font-size:.95rem;border-bottom:1px solid var(--border)}
+        .info-table th{background:var(--primary-light);color:var(--primary);font-weight:600;width:30%;white-space:nowrap}
+        .info-table tr:last-child th,.info-table tr:last-child td{border-bottom:none}
+
         /* APPEAL */
-        .appeal-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px}
+        .appeal-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:24px}
         .appeal{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:24px 20px;text-align:center}
         .appeal .icon{font-size:2rem;margin-bottom:10px}
         .appeal h3{font-size:1rem;font-weight:600;margin-bottom:8px;color:var(--primary)}
@@ -127,26 +133,45 @@
             <h2>募集職種</h2>
             <div class="job-cards">
                 <div class="job-card">
-                    <h3>💊 薬剤師</h3>
+                    <h3>💊 薬剤師（正社員）</h3>
                     <dl>
-                        <!-- TODO: 具体的な条件を記載 -->
-                        <dt>雇用形態:</dt><dd>正社員 / パート</dd>
-                        <dt>業務内容:</dt><dd>調剤、服薬指導、訪問調剤</dd>
+                        <dt>雇用形態:</dt><dd>正社員</dd>
+                        <dt>業務内容:</dt><dd>調剤、服薬指導、訪問調剤（在宅医療）</dd>
                         <dt>応募資格:</dt><dd>薬剤師免許をお持ちの方</dd>
-                        <dt>給与:</dt><dd><!-- TODO: 給与 -->経験・能力に応じて優遇</dd>
+                        <dt>給与:</dt><dd>経験・資格に応じて優遇（薬剤師手当・管理薬剤師手当あり）</dd>
+                        <dt>勤務時間:</dt><dd>8:45〜19:15（休憩 13:00〜15:00）</dd>
                     </dl>
                 </div>
                 <div class="job-card">
-                    <h3>📋 調剤事務</h3>
+                    <h3>📋 事務スタッフ（正社員）</h3>
                     <dl>
-                        <!-- TODO: 具体的な条件を記載 -->
-                        <dt>雇用形態:</dt><dd>正社員 / パート</dd>
-                        <dt>業務内容:</dt><dd>受付、処方せん入力、会計</dd>
+                        <dt>雇用形態:</dt><dd>正社員</dd>
+                        <dt>業務内容:</dt><dd>受付、処方せん入力、会計、総務業務</dd>
                         <dt>応募資格:</dt><dd>未経験歓迎・資格不問</dd>
-                        <dt>給与:</dt><dd><!-- TODO: 給与 -->経験・能力に応じて優遇</dd>
+                        <dt>給与:</dt><dd>経験・能力に応じて優遇（職務手当・総務手当あり）</dd>
+                        <dt>勤務時間:</dt><dd>8:45〜19:15（休憩 13:00〜15:00）</dd>
                     </dl>
                 </div>
             </div>
+            <div class="note-box" style="margin-top:20px">
+                <p>🕐 <strong>パートタイマーも募集中</strong><br>勤務日数・時間はご相談に応じます。お気軽にお問い合わせください。</p>
+            </div>
+        </div>
+
+        <!-- 待遇・福利厚生 -->
+        <div class="section animate">
+            <h2>待遇・福利厚生</h2>
+            <table class="info-table" style="box-shadow:var(--shadow)">
+                <tr><th>昇給</th><td>年1回（4月）</td></tr>
+                <tr><th>賞与</th><td>年2回（7月・12月）</td></tr>
+                <tr><th>休日</th><td>週休2日制、祝日、年末年始・GW・お盆（隣接クリニックに準ずる）</td></tr>
+                <tr><th>特別休暇</th><td>結婚休暇（5日）、配偶者出産休暇（2日）、忌引休暇（最大5日）※エビデンス不要・自己申告制</td></tr>
+                <tr><th>有給休暇</th><td>法定通り付与</td></tr>
+                <tr><th>通勤手当</th><td>あり（距離に応じて支給）</td></tr>
+                <tr><th>研修制度</th><td>外部研修・勉強会は会社負担、勤務時間扱い（認定薬剤師の研修単位取得サポート）</td></tr>
+                <tr><th>試用期間</th><td>3ヶ月</td></tr>
+                <tr><th>定年</th><td>65歳（継続雇用制度あり、ご相談ください）</td></tr>
+            </table>
         </div>
 
         <!-- 魅力 -->
@@ -155,18 +180,23 @@
             <div class="appeal-cards">
                 <div class="appeal">
                     <div class="icon">🏠</div>
-                    <h3>在宅医療の経験</h3>
-                    <p>訪問調剤に力を入れており、在宅医療のスキルを磨けます。</p>
+                    <h3>訪問調剤のスキル</h3>
+                    <p>訪問調剤を積極的に拡大中。成長分野である在宅医療の経験を積むことができます。</p>
                 </div>
                 <div class="appeal">
-                    <div class="icon">🌿</div>
-                    <h3>あたたかい職場</h3>
-                    <p>少人数ならではのアットホームな雰囲気で、のびのび働けます。</p>
+                    <div class="icon">🏥</div>
+                    <h3>幅広い処方に対応</h3>
+                    <p>隣接クリニックとの連携により、多様な処方に日常的に触れられる環境です。</p>
                 </div>
                 <div class="appeal">
                     <div class="icon">📚</div>
-                    <h3>成長をサポート</h3>
-                    <p>研修や勉強会を通じて、スキルアップを応援します。</p>
+                    <h3>研修制度が充実</h3>
+                    <p>外部研修は会社負担・勤務時間扱い。認定薬剤師の取得もサポートします。</p>
+                </div>
+                <div class="appeal">
+                    <div class="icon">🌿</div>
+                    <h3>アットホームな職場</h3>
+                    <p>少人数ならではの風通しの良い雰囲気。チームワークを大切にしています。</p>
                 </div>
             </div>
         </div>
@@ -176,27 +206,23 @@
             <h2>薬剤師の1日の流れ（例）</h2>
             <div class="timeline">
                 <div class="tl-item">
-                    <div class="tl-time">9:00</div>
+                    <div class="tl-time">8:45</div>
                     <div class="tl-content"><h3>出勤・開局準備</h3><p>在庫確認、機器の準備を行います。</p></div>
                 </div>
                 <div class="tl-item">
-                    <div class="tl-time">9:30</div>
-                    <div class="tl-content"><h3>調剤・服薬指導</h3><p>来局された患者さまの調剤・服薬指導を行います。</p></div>
+                    <div class="tl-time">9:00</div>
+                    <div class="tl-content"><h3>調剤・服薬指導</h3><p>隣接クリニック等からの処方せんに基づき調剤・服薬指導を行います。</p></div>
                 </div>
                 <div class="tl-item">
                     <div class="tl-time">13:00</div>
-                    <div class="tl-content"><h3>昼休憩</h3><p>しっかり1時間の休憩。</p></div>
+                    <div class="tl-content"><h3>昼休憩</h3><p>しっかり2時間の休憩（13:00〜15:00）。</p></div>
                 </div>
                 <div class="tl-item">
-                    <div class="tl-time">14:00</div>
-                    <div class="tl-content"><h3>訪問調剤</h3><p>患者さまのご自宅・施設を訪問し、服薬管理指導を行います。</p></div>
+                    <div class="tl-time">15:00</div>
+                    <div class="tl-content"><h3>訪問調剤・午後の調剤</h3><p>患者さまのご自宅・施設を訪問、または午後の来局対応を行います。</p></div>
                 </div>
                 <div class="tl-item">
-                    <div class="tl-time">16:00</div>
-                    <div class="tl-content"><h3>調剤・事務作業</h3><p>午後の調剤業務、報告書作成など。</p></div>
-                </div>
-                <div class="tl-item">
-                    <div class="tl-time">18:00</div>
+                    <div class="tl-time">19:15</div>
                     <div class="tl-content"><h3>閉局・退勤</h3><p>片付け、翌日の準備をして退勤します。</p></div>
                 </div>
             </div>
