@@ -153,6 +153,7 @@
             .hero { padding: 108px 16px 48px; }
             .services { padding: 24px 16px 48px; }
         }
+        .skip-link:focus { top: 0; }
         @media print { .header, .mobile-menu, .mobile-overlay { display: none !important; } .animate { opacity: 1 !important; transform: none !important; } }
     </style>
 </head>
@@ -193,7 +194,11 @@
         <a href="contact.html" class="mobile-cta">お問い合わせ</a>
     </div>
 
+    <!-- Skip Navigation -->
+    <a href="#main" class="skip-link" style="position:absolute;top:-100%;left:0;background:var(--primary);color:var(--white);padding:8px 16px;z-index:9999;font-size:.9rem;border-radius:0 0 8px 0;transition:top .2s">メインコンテンツへ</a>
+
     <!-- Hero -->
+    <main id="main">
     <section class="hero">
         <h1 class="animate">クリニック隣接×訪問調剤で<br><em>地域の健康を支える薬局</em></h1>
         <p class="animate">くるみ薬局 — 隣接クリニックとの連携と訪問調剤の拡充で、地域の皆さまの健康をやさしく支えます</p>
@@ -241,6 +246,8 @@
             </a>
         </div>
     </section>
+
+    </main>
 
     <!-- Footer -->
     <footer class="footer" role="contentinfo">
@@ -295,6 +302,7 @@
         overlay.addEventListener('click', shut);
         close.addEventListener('click', shut);
         menu.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', shut); });
+        document.addEventListener('keydown', function(e) { if (e.key === 'Escape') shut(); });
 
         var animEls = document.querySelectorAll('.animate');
         if ('IntersectionObserver' in window) {

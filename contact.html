@@ -83,7 +83,8 @@
         .hours-table .closed{color:#E55B5B;font-weight:600}
 
         .footer{background:var(--footer-bg);color:rgba(255,255,255,.75);padding:56px 24px 32px;margin-top:auto}.footer-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:48px;margin-bottom:40px}.footer-brand .logo{color:var(--white);margin-bottom:12px}.footer-brand p{font-size:.9rem;line-height:1.8}.footer-nav h4,.footer-contact h4{color:var(--white);font-size:.9rem;font-weight:600;margin-bottom:16px}.footer-nav a{display:block;padding:4px 0;font-size:.9rem;transition:color .2s}.footer-nav a:hover{color:var(--white)}.footer-contact p{font-size:.9rem;margin-bottom:8px}.footer-bottom{border-top:1px solid rgba(255,255,255,.15);padding-top:24px;text-align:center;font-size:.8rem;max-width:1100px;margin:0 auto}
-        .animate{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}.animate.in{opacity:1;transform:translateY(0)}@media(prefers-reduced-motion:reduce){.animate{opacity:1;transform:none;transition:none}}
+        .animate{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}.animate.in{opacity:1;transform:translateY(0)}.skip-link:focus{top:0}
+        @media(prefers-reduced-motion:reduce){.animate{opacity:1;transform:none;transition:none}}
         @media(max-width:768px){.nav-links,.nav .nav-cta{display:none}.hamburger{display:block}.mobile-overlay,.mobile-menu{display:block}.contact-info{grid-template-columns:1fr}.form-card{padding:28px 20px}.footer-inner{grid-template-columns:1fr;gap:32px}}
         @media(max-width:480px){.page-hero{padding:108px 16px 40px}.content{padding:32px 16px 48px}}
     </style>
@@ -112,6 +113,8 @@
         <a href="contact.html" class="mobile-cta">お問い合わせ</a>
     </div>
 
+    <a href="#main" class="skip-link" style="position:absolute;top:-100%;left:0;background:var(--primary);color:var(--white);padding:8px 16px;z-index:9999;font-size:.9rem;border-radius:0 0 8px 0;transition:top .2s">メインコンテンツへ</a>
+    <main id="main">
     <section class="page-hero">
         <h1 class="animate">お問い合わせ</h1>
         <p class="animate">お気軽にご連絡ください</p>
@@ -194,7 +197,7 @@
         <div class="section animate">
             <h2>営業時間</h2>
             <!-- TODO: 曜日ごとの開局パターンを確認（隣接クリニックに準ずる） -->
-            <table class="hours-table">
+            <table class="hours-table" aria-label="営業時間">
                 <thead>
                     <tr><th></th><th>月</th><th>火</th><th>水</th><th>木</th><th>金</th><th>土</th><th>日・祝</th></tr>
                 </thead>
@@ -213,6 +216,7 @@
         </div>
     </div>
 
+    </main>
     <footer class="footer" role="contentinfo">
         <div class="footer-inner">
             <div class="footer-brand">
@@ -226,7 +230,7 @@
     </footer>
     <script>
     (function(){
-        'use strict';var h=document.querySelector('.header');window.addEventListener('scroll',function(){h.classList.toggle('scrolled',window.pageYOffset>50)},{passive:true});var hb=document.querySelector('.hamburger'),ov=document.querySelector('.mobile-overlay'),m=document.querySelector('.mobile-menu'),cl=document.querySelector('.mobile-close');function op(){ov.classList.add('active');m.classList.add('active');hb.setAttribute('aria-expanded','true');document.body.style.overflow='hidden'}function sh(){ov.classList.remove('active');m.classList.remove('active');hb.setAttribute('aria-expanded','false');document.body.style.overflow=''}hb.addEventListener('click',op);ov.addEventListener('click',sh);cl.addEventListener('click',sh);m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',sh)});var els=document.querySelectorAll('.animate');if('IntersectionObserver' in window){var obs=new IntersectionObserver(function(e){e.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');obs.unobserve(en.target)}})},{threshold:.1,rootMargin:'0px 0px -40px 0px'});els.forEach(function(el){obs.observe(el)})}else{els.forEach(function(el){el.classList.add('in')})}
+        'use strict';var h=document.querySelector('.header');window.addEventListener('scroll',function(){h.classList.toggle('scrolled',window.pageYOffset>50)},{passive:true});var hb=document.querySelector('.hamburger'),ov=document.querySelector('.mobile-overlay'),m=document.querySelector('.mobile-menu'),cl=document.querySelector('.mobile-close');function op(){ov.classList.add('active');m.classList.add('active');hb.setAttribute('aria-expanded','true');document.body.style.overflow='hidden'}function sh(){ov.classList.remove('active');m.classList.remove('active');hb.setAttribute('aria-expanded','false');document.body.style.overflow=''}hb.addEventListener('click',op);ov.addEventListener('click',sh);cl.addEventListener('click',sh);m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',sh)});document.addEventListener('keydown',function(e){if(e.key==='Escape')sh()});var els=document.querySelectorAll('.animate');if('IntersectionObserver' in window){var obs=new IntersectionObserver(function(e){e.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');obs.unobserve(en.target)}})},{threshold:.1,rootMargin:'0px 0px -40px 0px'});els.forEach(function(el){obs.observe(el)})}else{els.forEach(function(el){el.classList.add('in')})}
     })();
     </script>
 </body>
