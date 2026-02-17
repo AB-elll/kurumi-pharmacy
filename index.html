@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>くるみ薬局｜調剤・訪問調剤・在宅医療｜埼玉県神川町</title>
+    <meta name="description" content="埼玉県児玉郡神川町のくるみ薬局。調剤、訪問調剤（在宅医療）、服薬管理指導に力を入れています。お気軽にご相談ください。">
+    <!-- TODO: canonical URLを本番ドメインに変更 -->
+    <link rel="canonical" href="https://kurumi-pharmacy.example.com/">
+
+    <!-- OGP -->
+    <meta property="og:title" content="くるみ薬局｜調剤・訪問調剤・在宅医療">
+    <meta property="og:description" content="埼玉県神川町の調剤薬局。訪問調剤・服薬管理指導に力を入れ、地域の健康を支えます。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kurumi-pharmacy.example.com/">
+    <!-- TODO: OG画像を設定 -->
+    <meta property="og:image" content="https://kurumi-pharmacy.example.com/og-image.jpg">
+    <meta property="og:site_name" content="くるみ薬局">
+    <meta property="og:locale" content="ja_JP">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🌰%3C/text%3E%3C/svg%3E">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Pharmacy",
+        "name": "くるみ薬局",
+        "url": "https://kurumi-pharmacy.example.com/",
+        "description": "調剤、訪問調剤（在宅医療）、服薬管理指導に力を入れる地域密着型の調剤薬局",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "児玉郡神川町",
+            "addressRegion": "埼玉県",
+            "addressCountry": "JP"
+        },
+        "parentOrganization": {
+            "@type": "Organization",
+            "name": "合同会社Kara's"
+        },
+        "serviceType": ["調剤", "訪問調剤", "在宅医療", "服薬管理指導"]
+    }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #3A8F6E;
+            --primary-light: #E8F5EE;
+            --primary-dark: #2D7058;
+            --accent: #8B6F47;
+            --accent-light: #FFF8F0;
+            --accent-hover: #7A6040;
+            --text: #333333;
+            --text-muted: #777777;
+            --bg: #FFF8F0;
+            --white: #FFFFFF;
+            --border: #E8E0D4;
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.04);
+            --shadow: 0 8px 24px rgba(0,0,0,0.06);
+            --shadow-lg: 0 16px 40px rgba(0,0,0,0.08);
+            --radius: 20px;
+            --radius-lg: 24px;
+            --footer-bg: #2D5A47;
+        }
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+        body { font-family: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, sans-serif; line-height: 1.8; color: var(--text); background: var(--bg); font-size: 16px; -webkit-font-smoothing: antialiased; min-height: 100dvh; display: flex; flex-direction: column; }
+        img { max-width: 100%; height: auto; }
+        a { color: inherit; text-decoration: none; }
+
+        /* HEADER */
+        .header { position: fixed; top: 0; left: 0; right: 0; background: rgba(255,255,255,0.97); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); z-index: 1000; transition: box-shadow 0.3s; }
+        .header.scrolled { box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+        .nav { max-width: 1100px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; height: 72px; }
+        .logo { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 1.25rem; color: var(--primary); }
+        .logo svg { flex-shrink: 0; }
+        .nav-links { display: flex; list-style: none; gap: 8px; }
+        .nav-links a { display: block; padding: 8px 16px; font-size: 0.9rem; font-weight: 500; color: var(--text); border-radius: 8px; transition: color 0.2s, background 0.2s; }
+        .nav-links a:hover { color: var(--primary); background: var(--primary-light); }
+        .nav-cta { display: inline-flex; align-items: center; gap: 6px; padding: 10px 24px; background: var(--primary); color: var(--white) !important; border-radius: 50px; font-weight: 600; font-size: 0.9rem; transition: background 0.2s, transform 0.2s; }
+        .nav-cta:hover { background: var(--primary-dark); transform: translateY(-1px); }
+        .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px; border-radius: 8px; color: var(--text); }
+        .hamburger:hover { background: var(--primary-light); }
+        .hamburger svg { display: block; }
+
+        /* MOBILE MENU */
+        .mobile-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.4); z-index: 999; opacity: 0; visibility: hidden; pointer-events: none; transition: opacity 0.3s, visibility 0.3s; }
+        .mobile-overlay.active { opacity: 1; visibility: visible; pointer-events: auto; }
+        .mobile-menu { display: none; position: fixed; top: 0; right: -280px; width: 280px; height: 100%; background: var(--white); z-index: 1001; padding: 80px 24px 24px; transition: right 0.3s ease; box-shadow: var(--shadow-lg); }
+        .mobile-menu.active { right: 0; }
+        .mobile-menu a { display: block; padding: 14px 16px; font-size: 1rem; font-weight: 500; color: var(--text); border-radius: 8px; margin-bottom: 4px; transition: background 0.2s; }
+        .mobile-menu a:hover { background: var(--primary-light); color: var(--primary); }
+        .mobile-menu .mobile-cta { display: block; text-align: center; margin-top: 16px; padding: 14px; background: var(--primary); color: var(--white); border-radius: 12px; font-weight: 600; }
+        .mobile-close { position: absolute; top: 20px; right: 20px; background: none; border: none; font-size: 24px; cursor: pointer; padding: 8px; border-radius: 8px; color: var(--text-muted); }
+
+        /* HERO */
+        .hero { padding: 120px 24px 64px; background: linear-gradient(160deg, var(--primary-light) 0%, var(--bg) 60%, #FFF 100%); text-align: center; }
+        .hero h1 { font-size: clamp(1.6rem, 4.5vw, 2.4rem); font-weight: 700; line-height: 1.5; margin-bottom: 16px; }
+        .hero h1 em { font-style: normal; color: var(--primary); }
+        .hero p { font-size: 1.05rem; color: var(--text-muted); margin-bottom: 32px; }
+        .hero .btn { display: inline-flex; align-items: center; gap: 8px; padding: 14px 32px; border-radius: 50px; font-weight: 600; font-size: 1rem; background: var(--primary); color: var(--white); border: none; cursor: pointer; font-family: inherit; transition: all 0.2s; box-shadow: 0 4px 16px rgba(58,143,110,0.3); }
+        .hero .btn:hover { background: var(--primary-dark); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(58,143,110,0.35); }
+
+        /* WAVE DIVIDER */
+        .wave-divider { margin-top: -1px; line-height: 0; overflow: hidden; }
+        .wave-divider svg { width: 100%; height: 60px; display: block; }
+
+        /* SERVICE CARDS */
+        .services { padding: 32px 24px 64px; max-width: 960px; margin: 0 auto; }
+        .services h2 { text-align: center; font-size: clamp(1.3rem, 3vw, 1.7rem); font-weight: 700; margin-bottom: 32px; }
+        .services-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+        .svc { display: flex; flex-direction: column; align-items: center; text-align: center; background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 32px 24px 28px; transition: box-shadow 0.25s, transform 0.25s; color: var(--text); }
+        .svc:hover { box-shadow: var(--shadow-lg); transform: translateY(-3px); }
+        .svc-icon { width: 56px; height: 56px; background: var(--primary-light); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
+        .svc-icon svg { width: 28px; height: 28px; color: var(--primary); }
+        .svc h3 { font-size: 1.05rem; font-weight: 600; margin-bottom: 8px; }
+        .svc p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 16px; flex: 1; }
+        .svc-link { font-size: 0.9rem; font-weight: 600; color: var(--primary); display: inline-flex; align-items: center; gap: 4px; }
+
+        /* FOOTER */
+        .footer { background: var(--footer-bg); color: rgba(255,255,255,0.75); padding: 56px 24px 32px; margin-top: auto; }
+        .footer-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 48px; margin-bottom: 40px; }
+        .footer-brand .logo { color: var(--white); margin-bottom: 12px; }
+        .footer-brand p { font-size: 0.9rem; line-height: 1.8; }
+        .footer-nav h4, .footer-contact h4 { color: var(--white); font-size: 0.9rem; font-weight: 600; margin-bottom: 16px; }
+        .footer-nav a { display: block; padding: 4px 0; font-size: 0.9rem; transition: color 0.2s; }
+        .footer-nav a:hover { color: var(--white); }
+        .footer-contact p { font-size: 0.9rem; margin-bottom: 8px; }
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.15); padding-top: 24px; text-align: center; font-size: 0.8rem; max-width: 1100px; margin: 0 auto; }
+
+        /* ANIMATIONS */
+        .animate { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+        .animate.in { opacity: 1; transform: translateY(0); }
+        @media (prefers-reduced-motion: reduce) { .animate { opacity: 1; transform: none; transition: none; } }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .nav-links, .nav .nav-cta { display: none; }
+            .hamburger { display: block; }
+            .mobile-overlay, .mobile-menu { display: block; }
+            .services-grid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
+            .footer-inner { grid-template-columns: 1fr; gap: 32px; }
+        }
+        @media (max-width: 480px) {
+            .hero { padding: 108px 16px 48px; }
+            .services { padding: 24px 16px 48px; }
+        }
+        @media print { .header, .mobile-menu, .mobile-overlay { display: none !important; } .animate { opacity: 1 !important; transform: none !important; } }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header" role="banner">
+        <nav class="nav" aria-label="メインナビゲーション">
+            <a href="index.html" class="logo" aria-label="くるみ薬局 トップページ">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" width="32" height="32" aria-hidden="true"><ellipse cx="18" cy="18" rx="14" ry="15" fill="#8B6F47"/><ellipse cx="18" cy="18" rx="11" ry="12" fill="#A8895A"/><path d="M18 6 C18 6 18 30 18 30" stroke="#8B6F47" stroke-width="1.5" fill="none"/><path d="M10 12 Q14 18 10 24" stroke="#3A8F6E" stroke-width="1.2" fill="none" stroke-linecap="round"/><path d="M26 12 Q22 18 26 24" stroke="#3A8F6E" stroke-width="1.2" fill="none" stroke-linecap="round"/><ellipse cx="18" cy="5" rx="3" ry="2" fill="#3A8F6E"/></svg>
+                くるみ薬局
+            </a>
+            <ul class="nav-links" role="list">
+                <li><a href="about.html">薬局紹介</a></li>
+                <li><a href="services.html">サービス</a></li>
+                <li><a href="houmon.html">訪問調剤</a></li>
+                <li><a href="recruit.html">採用情報</a></li>
+            </ul>
+            <a href="contact.html" class="nav-cta">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                お問い合わせ
+            </a>
+            <button class="hamburger" aria-label="メニューを開く" aria-expanded="false">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-overlay" aria-hidden="true"></div>
+    <div class="mobile-menu" role="dialog" aria-label="モバイルメニュー">
+        <button class="mobile-close" aria-label="メニューを閉じる">✕</button>
+        <a href="index.html">ホーム</a>
+        <a href="about.html">薬局紹介</a>
+        <a href="services.html">サービス</a>
+        <a href="houmon.html">訪問調剤</a>
+        <a href="recruit.html">採用情報</a>
+        <a href="contact.html" class="mobile-cta">お問い合わせ</a>
+    </div>
+
+    <!-- Hero -->
+    <section class="hero">
+        <h1 class="animate">あなたの暮らしに寄り添う<br><em>かかりつけ薬局</em></h1>
+        <p class="animate">くるみ薬局 — 調剤から訪問調剤・在宅医療まで、地域の健康をやさしく支えます</p>
+        <a href="houmon.html" class="btn animate">訪問調剤について詳しく →</a>
+    </section>
+
+    <!-- Wave divider -->
+    <div class="wave-divider"><svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0,40 C360,80 720,0 1080,40 C1260,60 1380,50 1440,40 L1440,0 L0,0 Z" fill="#E8F5EE" opacity="0.5"/><path d="M0,30 C240,70 480,10 720,40 C960,70 1200,10 1440,30 L1440,0 L0,0 Z" fill="#FFF8F0"/></svg></div>
+
+    <!-- Services -->
+    <section class="services">
+        <h2 class="animate">くるみ薬局のサービス</h2>
+        <div class="services-grid">
+            <a href="services.html" class="svc animate">
+                <div class="svc-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L12 22M2 12L22 12"/><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
+                </div>
+                <h3>調剤</h3>
+                <p>処方せんに基づく正確・丁寧な調剤で、安心のお薬をお届けします。</p>
+                <span class="svc-link">詳しく見る →</span>
+            </a>
+            <a href="houmon.html" class="svc animate">
+                <div class="svc-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                </div>
+                <h3>訪問調剤・在宅医療</h3>
+                <p>ご自宅や施設へ薬剤師がお伺いし、お薬の管理・指導を行います。</p>
+                <span class="svc-link">詳しく見る →</span>
+            </a>
+            <a href="services.html" class="svc animate">
+                <div class="svc-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                </div>
+                <h3>健康相談・服薬指導</h3>
+                <p>お薬の飲み方や健康に関するお悩みを、薬剤師が丁寧にサポートします。</p>
+                <span class="svc-link">詳しく見る →</span>
+            </a>
+            <a href="recruit.html" class="svc animate">
+                <div class="svc-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+                </div>
+                <h3>採用情報</h3>
+                <p>地域医療を一緒に支える仲間を募集しています。</p>
+                <span class="svc-link">詳しく見る →</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <div class="logo">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" width="28" height="28" aria-hidden="true"><ellipse cx="18" cy="18" rx="14" ry="15" fill="#A8895A"/><ellipse cx="18" cy="18" rx="11" ry="12" fill="#C4A870"/><path d="M18 6 C18 6 18 30 18 30" stroke="#A8895A" stroke-width="1.5" fill="none"/><path d="M10 12 Q14 18 10 24" stroke="#7ECB9E" stroke-width="1.2" fill="none" stroke-linecap="round"/><path d="M26 12 Q22 18 26 24" stroke="#7ECB9E" stroke-width="1.2" fill="none" stroke-linecap="round"/><ellipse cx="18" cy="5" rx="3" ry="2" fill="#7ECB9E"/></svg>
+                    くるみ薬局
+                </div>
+                <p>調剤から訪問調剤・在宅医療まで、<br>地域の皆さまの健康を支えます。</p>
+            </div>
+            <div class="footer-nav">
+                <h4>サイトマップ</h4>
+                <a href="index.html">ホーム</a>
+                <a href="about.html">薬局紹介</a>
+                <a href="services.html">サービス</a>
+                <a href="houmon.html">訪問調剤</a>
+                <a href="recruit.html">採用情報</a>
+                <a href="contact.html">お問い合わせ</a>
+            </div>
+            <div class="footer-contact">
+                <h4>お問い合わせ</h4>
+                <!-- TODO: 正確な住所に差し替え -->
+                <p>埼玉県児玉郡神川町<br><!-- TODO: 番地を追記 --></p>
+                <!-- TODO: 電話番号を追記 -->
+                <p>TEL: XXX-XXXX-XXXX</p>
+                <!-- TODO: メールアドレスを追記 -->
+                <p>Mail: info@example.com</p>
+                <p style="margin-top:8px;font-size:0.85rem;">運営: 合同会社Kara's</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 くるみ薬局（合同会社Kara's） All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+    (function() {
+        'use strict';
+        var header = document.querySelector('.header');
+        window.addEventListener('scroll', function() {
+            header.classList.toggle('scrolled', window.pageYOffset > 50);
+        }, { passive: true });
+
+        var hamburger = document.querySelector('.hamburger');
+        var overlay = document.querySelector('.mobile-overlay');
+        var menu = document.querySelector('.mobile-menu');
+        var close = document.querySelector('.mobile-close');
+        function open() { overlay.classList.add('active'); menu.classList.add('active'); hamburger.setAttribute('aria-expanded','true'); document.body.style.overflow='hidden'; }
+        function shut() { overlay.classList.remove('active'); menu.classList.remove('active'); hamburger.setAttribute('aria-expanded','false'); document.body.style.overflow=''; }
+        hamburger.addEventListener('click', open);
+        overlay.addEventListener('click', shut);
+        close.addEventListener('click', shut);
+        menu.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', shut); });
+
+        var animEls = document.querySelectorAll('.animate');
+        if ('IntersectionObserver' in window) {
+            var obs = new IntersectionObserver(function(entries) { entries.forEach(function(entry) { if (entry.isIntersecting) { entry.target.classList.add('in'); obs.unobserve(entry.target); } }); }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+            animEls.forEach(function(el) { obs.observe(el); });
+        } else { animEls.forEach(function(el) { el.classList.add('in'); }); }
+    })();
+    </script>
+</body>
+</html>
